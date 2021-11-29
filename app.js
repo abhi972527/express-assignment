@@ -25,12 +25,12 @@ app.post("/", (req, res) => {
 
 
 app.get("/:ID", (req, res) => {
-    const newUsers = users.filter((user) => user.ID === req.params.ID);
+    const newUsers = users.filter((user) => user.ID == req.params.ID);
     res.send(newUsers);
 });
 
 
-app.patch("/:id", (req, res) => {
+app.patch("/:ID", (req, res) => {
     res.send("Patch");
 });
 
